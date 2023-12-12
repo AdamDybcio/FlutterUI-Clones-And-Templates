@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_uis/ui_screens/instagram_ui.dart';
+import 'package:flutter_uis/ui_screens/facebook/facebook_ui.dart';
+import 'package:flutter_uis/ui_screens/instagram/instagram_ui.dart';
 
+import 'core_widgets/bg_widget.dart';
 import 'core_widgets/ui_widget.dart';
 
 class MainScreen extends StatelessWidget {
@@ -31,16 +33,7 @@ class MainScreen extends StatelessWidget {
       ),
       body: Stack(
         children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
-            child: const FittedBox(
-              fit: BoxFit.cover,
-              child: Image(
-                image: AssetImage('assets/images/bg.jpg'),
-              ),
-            ),
-          ),
+          const BgWidget(),
           Center(
             child: Container(
               height: MediaQuery.of(context).size.height,
@@ -58,6 +51,11 @@ class MainScreen extends StatelessWidget {
                     name: 'Instagram',
                     asset: 'instagram.png',
                     route: InstagramUI(),
+                  ),
+                  UIWidget(
+                    name: 'Facebook',
+                    asset: 'facebook.png',
+                    route: FacebookUI(),
                   ),
                 ],
               ),

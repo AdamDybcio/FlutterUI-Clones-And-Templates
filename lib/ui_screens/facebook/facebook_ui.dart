@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class InstagramUI extends StatelessWidget {
-  const InstagramUI({super.key});
+class FacebookUI extends StatelessWidget {
+  const FacebookUI({super.key});
 
   @override
   Widget build(BuildContext context) {

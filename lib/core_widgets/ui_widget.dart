@@ -18,7 +18,7 @@ class UIWidget extends StatelessWidget {
         color: Colors.transparent,
         child: InkWell(
           splashColor: Colors.white,
-          radius: 75,
+          radius: 20,
           borderRadius: BorderRadius.circular(25),
           onTap: () {
             Navigator.of(context).push(
@@ -74,23 +74,25 @@ class UIWidget extends StatelessWidget {
                 Container(
                   height: MediaQuery.of(context).size.height * 0.1,
                   width: MediaQuery.of(context).size.height * 0.1,
+                  padding:
+                      EdgeInsets.all(MediaQuery.of(context).size.height * 0.01),
                   decoration: BoxDecoration(
                     border: Border.all(
-                      width: 3,
-                      color: Colors.black,
+                      width: 5,
+                      color: Colors.deepPurple,
                     ),
                     borderRadius: BorderRadius.circular(
                       25,
                     ),
                     boxShadow: const [
                       BoxShadow(
-                        blurRadius: 5,
-                        color: Colors.black,
+                        blurRadius: 10,
+                        color: Colors.purple,
                       )
                     ],
                   ),
                   child: FittedBox(
-                    fit: BoxFit.contain,
+                    fit: BoxFit.cover,
                     child: Image(
                       image: AssetImage('assets/images/$asset'),
                     ),
